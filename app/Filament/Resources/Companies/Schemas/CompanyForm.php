@@ -13,16 +13,23 @@ final class CompanyForm
 {
     public static function configure(Schema $schema): Schema
     {
-return $schema
-    ->components([
-        Grid::make()
-            ->schema([
-                Section::make()
-                    ->relationship('openingHours')
-                    ->schema([
-                        TextInput::make('monday_open_time'),
-                    ]),
-            ]),
-        ]);
+        return $schema
+            ->components(function (): array {
+                return [
+                    Grid::make()
+                        ->schema([
+                            Section::make()
+                                ->schema([
+                                    TextInput::make('name')
+                                        ->required(),
+                                ]),
+                            Section::make()
+                                ->relationship('openingHours')
+                                ->schema([
+                                    TextInput::make('monday_open_time'),
+                                ]),
+                        ]),
+                ];
+            });
     }
 }
