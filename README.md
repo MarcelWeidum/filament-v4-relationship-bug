@@ -24,3 +24,5 @@ php artisan key:generate
 ```
 php artisan migrate:fresh --seed
 ```
+
+Change `app/Filament/Resources/Companies/Schemas/CompanyForm.php` to a closure or an array.

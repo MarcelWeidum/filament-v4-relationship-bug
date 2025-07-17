@@ -31,5 +31,20 @@ final class CompanyForm
                         ]),
                 ];
             });
+            // ->components([
+            //     Grid::make()
+            //         ->schema([
+            //             Section::make()
+            //                 ->schema([
+            //                     TextInput::make('name')
+            //                         ->required(),
+            //                 ]),
+            //             Section::make()
+            //                 ->relationship('openingHours')
+            //                 ->schema([
+            //                     TextInput::make('monday_open_time'),
+            //                 ]),
+            //         ]),
+            // ]);
     }
 }
